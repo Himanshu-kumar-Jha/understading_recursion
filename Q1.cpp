@@ -11,6 +11,26 @@ void OneToN(int current , int n)
     OneToN(current+1, n);
 }
 
+void OneToN(int n)
+{
+if(n==0)
+{
+    return;
+}
+OneToN(n-1);
+std::cout<<n<<" ";
+}
+
+void NToOne(int n)
+{
+    if(n==0)
+    {
+        return;
+    }
+    std::cout<<n<<" ";
+    NToOne(n-1);
+}
+
 void NToOne(int current , int n)
 {
     if(current > n)
@@ -24,6 +44,6 @@ void NToOne(int current , int n)
 int main()
 {
     int n =10;
-    NToOne(1 , 10);
+    NToOne(10);
     return 0;
 }
