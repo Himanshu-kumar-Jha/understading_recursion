@@ -36,13 +36,15 @@ step 5 -> Write the code
 */
 
 int sumTilln(int n){
-    if(n==0){
-        return 0;
+    if(n==0 || n==1){
+        return n;
     }
     return sumTilln(n-1) + n;
 }
 
 int main(){
+
 cout<<sumTilln(5);
+
     return 0;
 }
