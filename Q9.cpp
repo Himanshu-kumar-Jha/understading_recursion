@@ -18,7 +18,6 @@ void generateSubset(vector<int>&nums , int index , vector<int>&current ,vector<v
 
 }
 int main(){
-
  vector<int>nums = {1,2,3};
  generateSubset(nums , 0 , current , result);
 for(auto c : result){
