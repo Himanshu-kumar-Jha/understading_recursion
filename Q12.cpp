@@ -19,7 +19,6 @@ int numberOfWays(int index , vector<int>&nums , int sum , int target){
 }
 int main(){
     vector<int>nums = {1,1,1,1,1};
-    vector<int>current;
     int index;
     int sum = 0;
     int target =3;
