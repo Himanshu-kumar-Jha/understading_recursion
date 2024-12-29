@@ -41,13 +41,22 @@ void mergeSort(vector<int>&arr , int start , int end){
     mergeSort(arr,mid+1,end);
     merge(arr,start,mid,end);
 }
+void mergeSortIterative(vector<int>&arr, int n) {
+    for (int size = 1; size < n; size = 2 * size) {
+        for (int left = 0; left < n; left += 2 * size) {
+            int mid = min(n - 1, left + size - 1);
+            int right = min((left + 2 * size - 1), (n - 1));
+            merge(arr, left, mid, right);
+        }
+    }
+}
+
 int main(){
     vector<int>arr = {9,8,7,6,5,4,2,1};
     int n = arr.size();
-    mergeSort(arr,0,n-1);
+    mergeSortIterative(arr,n);
     for(auto a : arr){
         cout<<a<<" ";
     }
-
     return 0;
 }
